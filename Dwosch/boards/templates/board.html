@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ current_board.name }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header" style="padding-bottom: 123px">
+            <div class="content-holder">
+                <ul>
+                    <div class="image-holder" href="/">
+                        <img src="{% static "img/logo.png" %}">
+                        <a class="mainlogo" href="/">Дво.щ</a>
+                    </div>
+                    <span class="text-logo">Ну здрасьте. Again.</span>
+                </ul>
+            </div>
+        </header>
+        <div style="text-align: center;">
+            {% for board in boards %}
+                    <a href="{% url 'boards:board' board.url %}"> {{ board.name }} </a>
+                    <span>/ </span>
+            {% endfor %}
+        </div>
+
+        <form id="postform" class="postform tmp_postform" action="" method="POST">
+            <article class="postscontainer hdescription" style="text-decoration: blink;">
+                <a style="text-decoration: blink;">Отправить пост</a>
+                <hr class="postform-hr">
+
+                <input type="text" name="content">
+
+
+            </article>
+		</form>
+
+        <section class="content">
+
+        </section>
+    </div>
+</body>
+</html>

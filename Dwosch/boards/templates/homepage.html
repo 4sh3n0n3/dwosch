@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Dwosch!</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header" style="padding-bottom: 123px">
+            <div class="content-holder">
+                <ul>
+                    <div class="image-holder" href="/">
+                        <img src="{% static "img/logo.png" %}">
+                        <a class="mainlogo" href="/">Дво.щ</a>
+                    </div>
+                    <span class="text-logo">Ну здрасьте. Again.</span>
+                </ul>
+            </div>
+        </header>
+        <section class="content">
+            <article class="postscontainer hdescription">
+                Двощ. Что тут сказать, проще <a href="https://2ch.hk/">показать</a>.
+            </article>
+            <article class="postscontainer hdescription  hboardlist">
+                <ul>
+                    <li class="boardsubj">
+                        Борды
+                    </li>
+                    {% for board in boards %}
+                        <li>
+                            <a href="{% url 'boards:board' board.url %}"> {{ board.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

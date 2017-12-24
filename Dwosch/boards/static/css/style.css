@@ -1,0 +1,94 @@
+.content-holder {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.image-holder {
+    img {
+        display: block;
+        border: none;
+    }
+}
+
+.mainlogo {
+    color: #F26722;
+    font-size: 46px;
+    font-weight: bold;
+    text-decoration: blink;
+}
+
+.text-logo {
+    display: block;
+    font-size: 1.2em;
+    line-height: 2em;
+    color: #FF7000;
+}
+
+.postscontainer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FCFCFC;
+    border-color: #D7D7D7;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    padding: 15px 15px 0;
+}
+
+.hdescription {
+    color: #292929;
+    font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin: 30px 0 !important;
+    padding: 20px !important;
+}
+
+a, .a-link-emulator {
+    color: #FF6600;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hboardlist .boardsubj {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgba(90, 90, 90, 1);
+}
+
+#postform {
+    margin: auto;
+    text-align: left;
+}
+
+.postform {
+    font-size: 0.9em;
+}
+
+.tmp_postform {
+    width: 510px;
+}
+
+.postform-hr {
+    width: 550px;
+    max-width: 100%;
+    clear: both;
+    box-sizing: content-box;
+}
